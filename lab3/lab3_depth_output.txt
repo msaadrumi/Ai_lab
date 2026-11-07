@@ -1,0 +1,11 @@
+DLS results
+limit=1: status=CUTOFF, path=None
+limit=2: status=CUTOFF, path=None
+limit=3: status=FOUND, path=A -> B -> D -> G
+limit=4: status=FOUND, path=A -> B -> D -> G
+
+IDDFS results
+max_depth=1: status=CUTOFF, limits_attempted=[1], path=None
+max_depth=2: status=CUTOFF, limits_attempted=[1, 2], path=None
+max_depth=3: status=FOUND, limits_attempted=[1, 2, 3], path=A -> B -> D -> G
+max_depth=4: status=FOUND, limits_attempted=[1, 2, 3], path=A -> B -> D -> G

@@ -1,0 +1,24 @@
+LAB 6 MANUAL EVIDENCE
+
+1. Tokenization
+Input: I can't log in.
+Whitespace tokens: ["I", "can't", "log", "in."] -> 4
+Word-like regex tokens: ["I", "can", "t", "log", "in"] -> 5
+Reason: whitespace keeps punctuation attached to tokens, while the word-like regex extracts word characters and splits the contraction.
+
+Input: help@example.com
+The regex breaks the email into smaller word-like pieces instead of preserving the complete address as one token.
+
+2. Chunking
+Fixed window size = 40 words.
+Overlap 0 uses non-overlapping windows.
+Overlap 10 reuses 10 words between neighboring windows, which increases repeated content.
+Sentence-aware chunking tries to keep sentence boundaries but still splits a sentence longer than 40 words.
+
+3. Retrieval
+Hit@3 = 1 when at least one relevant chunk is in the first three results; otherwise 0.
+MRR@3 = reciprocal of the rank of the first relevant result, or 0 for a miss.
+The notebook evaluates 8 answerable and 2 unanswerable queries.
+
+4. Responsible evidence
+A high similarity score is not proof that the retrieved text is correct. An unanswerable query may still receive a plausible-looking result, so the assistant exposes the evidence and source instead of silently presenting it as a verified answer.

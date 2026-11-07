@@ -1,0 +1,27 @@
+BFS manual trace
+Successor order: B,C at A; D,E at B; F at C; G at D.
+
+Step | Queue before | Processed | Path
+1 | [A] | A | A
+2 | [B,C] | B | A-B
+3 | [C,D,E] | C | A-C
+4 | [D,E,F] | D | A-B-D
+5 | [E,F,G] | E | A-B-E
+6 | [F,G] | F | A-C-F
+7 | [G] | G | A-B-D-G
+
+Final BFS path: A-B-D-G
+Final BFS visit order: A, B, C, D, E, F, G
+
+DFS manual trace
+Stack uses the supplied successor order. The stack pushes successors in reverse
+so that the first successor is processed first.
+
+Step | Stack before | Processed | Path
+1 | [A] | A | A
+2 | [C,B] | B | A-B
+3 | [C,E,D] | D | A-B-D
+4 | [C,E,G] | G | A-B-D-G
+
+Final DFS path: A-B-D-G
+Final DFS visit order: A, B, D, G

@@ -1,0 +1,9 @@
+Scholarship case:
+A student asks a conversational AI whether they qualify for a scholarship.
+The AI may give a fluent explanation, but fluency alone does not prove
+that the answer is factually correct or that the system has general intelligence.
+
+Additional reliable-task test:
+Give the system four fixed scholarship records and ask it to apply
+the published rules. Check whether it produces the same decisions
+and reasons as a verified reference implementation.

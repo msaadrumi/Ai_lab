@@ -1,0 +1,36 @@
+LAB 5 MANUAL MINIMAX TRACE
+
+Tree:
+                 MAX
+             /         \
+           MIN          MIN
+         /    \       /    \
+       MAX    MAX    MAX    MAX
+      /  \   /  \   /  \   /  \
+     3    5 2    9 3    5 2    9
+
+1. Left MAX: max(3,5) = 5.
+2. Right MAX of left MIN: max(2,9) = 9.
+3. Left MIN: min(5,9) = 5.
+4. Right MIN:
+   - MAX(3,5) = 5
+   - MAX(2,9) = 9
+   - MIN(5,9) = 5
+5. Root MAX: max(5,5) = 5.
+
+Therefore the Minimax root value is 5 and the left and right root branches tie.
+
+Leaf counter:
+Minimax evaluates all 8 terminal leaves.
+
+Alpha-beta with the original left-to-right order:
+- The first MIN branch establishes root alpha = 5.
+- In the right MIN branch, MAX(3,5) returns 5, so beta becomes 5.
+- The remaining right MIN MAX(2,9) is evaluated fully here because its first value 2 does not reach alpha=5.
+- Alpha-beta therefore evaluates 6 leaves in the original ordering.
+- Two leaves are pruned.
+
+Reordered branches:
+[5,3,9,2,3,5,9,2]
+The root value is still 5 because the underlying leaf values are unchanged, but alpha-beta evaluates only 5 leaves.
+Three leaves are pruned.

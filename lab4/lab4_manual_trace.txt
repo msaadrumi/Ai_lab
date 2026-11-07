@@ -1,0 +1,57 @@
+LAB 4 MANUAL TRACE
+
+Graph:
+S -> A (1)
+S -> B (4)
+A -> C (2)
+B -> G (5)
+C -> G (3)
+
+h(S)=5, h(A)=4, h(B)=4, h(C)=2, h(G)=0
+Start S, Goal G
+Priority rule: smallest f, then smallest g, then node name.
+
+Expansion 1: select S
+g(S)=0
+h(S)=5
+f(S)=g+h=0+5=5
+
+Generate:
+A: g=0+1=1, h=4, f=1+4=5
+B: g=0+4=4, h=4, f=4+4=8
+
+Remaining frontier:
+A: (g=1,h=4,f=5)
+B: (g=4,h=4,f=8)
+
+Why A next: A has the smallest f, 5 < 8.
+
+Expansion 2: select A
+g(A)=1
+h(A)=4
+f(A)=1+4=5
+
+Generate:
+C: g=1+2=3, h=2, f=3+2=5
+
+Remaining frontier:
+C: (g=3,h=2,f=5)
+B: (g=4,h=4,f=8)
+
+Why C next: C has the smallest f, 5 < 8.
+
+Expansion 3: select C
+g(C)=3
+h(C)=2
+f(C)=3+2=5
+
+Generate:
+G: g=3+3=6, h=0, f=6+0=6
+
+Remaining frontier:
+G: (g=6,h=0,f=6)
+B: (g=4,h=4,f=8)
+
+Why G next: G has the smallest f, 6 < 8.
+
+After these three expansions, G is selected next and the goal is reached with cost 6.

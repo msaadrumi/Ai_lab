@@ -1,0 +1,4 @@
+from document_chatbot import build_faq_bot
+bot=build_faq_bot()
+print("Question: volcano geology")
+print(bot.reply("volcano geology"))

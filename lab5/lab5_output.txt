@@ -1,0 +1,22 @@
+===== lab5_minimax_alphabeta.py =====
+
+Original left-to-right order
+Leaves: [3, 5, 2, 9, 3, 5, 2, 9]
+Minimax value: 5
+Minimax leaves evaluated: 8
+Alpha-beta value: 5
+Alpha-beta leaves evaluated: 6
+Alpha-beta terminal values visited: [3, 5, 2, 9, 3, 5]
+Pruned leaves: 2
+
+Reordered branches
+Leaves: [5, 3, 9, 2, 3, 5, 9, 2]
+Minimax value: 5
+Minimax leaves evaluated: 8
+Alpha-beta value: 5
+Alpha-beta leaves evaluated: 5
+Alpha-beta terminal values visited: [5, 3, 9, 3, 5]
+Pruned leaves: 3
+
+===== lab5_check.py =====
+All Lab 5 checks passed.

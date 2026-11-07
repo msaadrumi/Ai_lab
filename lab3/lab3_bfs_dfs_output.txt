@@ -1,0 +1,4 @@
+BFS path: A -> B -> D -> G
+BFS visit order: A -> B -> C -> D -> E -> F -> G
+DFS path: A -> B -> D -> G
+DFS visit order: A -> B -> D -> G

@@ -1,0 +1,40 @@
+===== python lab4_astar.py =====
+A*
+Path: S -> A -> C -> G
+Cost: 6
+Expanded: ['S', 'A', 'C', 'G']
+Expansion count: 4
+Trace: [('EXPAND', 'S', 0, 5, 5), ('EXPAND', 'A', 1, 4, 5), ('EXPAND', 'C', 3, 2, 5), ('EXPAND', 'G', 6, 0, 6)]
+
+UCS (zero heuristic)
+Path: S -> A -> C -> G
+Cost: 6
+Expanded: ['S', 'A', 'C', 'B', 'G']
+Expansion count: 5
+Trace: [('EXPAND', 'S', 0, 0, 0), ('EXPAND', 'A', 1, 0, 1), ('EXPAND', 'C', 3, 0, 3), ('EXPAND', 'B', 4, 0, 4), ('EXPAND', 'G', 6, 0, 6)]
+
+===== python lab4_astar_audit.py =====
+Original A*
+Heuristic: {'S': 5, 'A': 4, 'B': 4, 'C': 2, 'G': 0}
+Path: S -> A -> C -> G
+Reported cost: 6
+Independent path cost: 6
+Expanded: ['S', 'A', 'C', 'G']
+Expansion count: 4
+Trace: [('EXPAND', 'S', 0, 5, 5), ('EXPAND', 'A', 1, 4, 5), ('EXPAND', 'C', 3, 2, 5), ('EXPAND', 'G', 6, 0, 6)]
+
+Overestimate experiment: h(C)=10
+Heuristic: {'S': 5, 'A': 4, 'B': 4, 'C': 10, 'G': 0}
+Path: S -> B -> G
+Reported cost: 9
+Independent path cost: 9
+Expanded: ['S', 'A', 'B', 'G']
+Expansion count: 4
+Trace: [('EXPAND', 'S', 0, 5, 5), ('EXPAND', 'A', 1, 4, 5), ('EXPAND', 'B', 4, 4, 8), ('EXPAND', 'G', 9, 0, 9)]
+
+Original h(C): 2
+Modified h(C): 10
+True remaining cost from C to G: 3
+
+===== python lab4_check.py =====
+All Lab 4 checks passed.

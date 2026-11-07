@@ -1,0 +1,1 @@
+The supplied notebook reports retrieval_log.csv rows: 180. This submission keeps 180 rows. TF-IDF rows are reproduced locally. Embedding rows intentionally have blank score/chunk fields because the current environment does not have sentence-transformers installed; no embedding outputs are invented. The notebook-recorded embedding metrics remain in lab6_output.txt and the report.

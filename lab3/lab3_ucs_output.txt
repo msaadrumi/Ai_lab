@@ -1,0 +1,15 @@
+Weighted graph edge list:
+A->B=1
+A->C=4
+B->D=2
+B->E=1
+C->F=2
+C->G=2  (added corridor)
+D->G=5
+
+UCS processing order: A(0) -> B(1) -> E(2) -> D(3) -> C(4) -> F(6) -> G(6)
+UCS path: A -> C -> G
+UCS returned cost: 6
+UCS independently summed cost: 6
+BFS path on same weighted topology: A -> C -> G
+BFS path cost: 6

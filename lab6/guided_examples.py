@@ -1,0 +1,10 @@
+from document_chatbot import build_faq_bot
+bot = build_faq_bot()
+print("Exact FAQ:")
+print(bot.reply("How do I reset my password?"))
+print("\nParaphrase:")
+print(bot.reply("password recovery"))
+print("\nEmpty:")
+print(repr(bot.reply("")))
+print("\nUnsupported:")
+print(bot.reply("volcano geology"))

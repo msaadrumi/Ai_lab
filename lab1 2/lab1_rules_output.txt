@@ -1,0 +1,24 @@
+Case: Pass
+Input: {'score': 80, 'documents_complete': True, 'attendance': 85, 'income': 40000}
+Expected result: True
+Actual result: True
+Reason: all synthetic scholarship conditions are satisfied
+---------------------------------------------
+Case: Attendance failure
+Input: {'score': 80, 'documents_complete': True, 'attendance': 70, 'income': 40000}
+Expected result: False
+Actual result: False
+Reason: attendance is below the 75% requirement
+---------------------------------------------
+Case: Income failure
+Input: {'score': 80, 'documents_complete': True, 'attendance': 85, 'income': 60000}
+Expected result: False
+Actual result: False
+Reason: income is above the Rs. 50,000 requirement
+---------------------------------------------
+Case: Threshold boundary
+Input: {'score': 70, 'documents_complete': True, 'attendance': 75, 'income': 50000}
+Expected result: True
+Actual result: True
+Reason: all synthetic scholarship conditions are satisfied
+---------------------------------------------
